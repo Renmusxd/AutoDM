@@ -1,0 +1,19 @@
+"Example Man" {
+    DESC = "Just a normal guy doing his normal thing",
+    NODE = example_home,
+
+    "(8<=hour) and (hour<20)" {
+        # From 8am to 8pm
+        DESC = "Just a sleepy guy",
+    },
+
+    "(20<=hour) and (hour<24)" {
+        # From 8pm to 12am
+        DESC = "Just a normal drunk",
+        NODE = example_tavern,
+    },
+
+    "(0<=hour) and (hour<8)" {
+        DESC = "Just an Asleep guy",
+    },
+}

@@ -1,0 +1,30 @@
+example_quest_1 {
+    # The first node
+    1 {
+        "This is the first node of the first quest",
+        2 : "You take a step",
+        3 : "You skip to the end",
+    },
+    2 {
+        "This is the second node of the first quest",
+        3 : "You take the last step",
+    },
+    3 {
+        "This is the third and final node of the first quest",
+    },
+}
+
+example_quest_2 {
+    1 {
+        "This is the first node of the second quest",
+        2 : "You take a step again",
+        3,
+    },
+    2 {
+        "This is the second node of the second quest",
+        3 : "You are bored",
+    },
+    3 {
+        "This is the third and final node of the second quest",
+    },
+}

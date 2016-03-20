@@ -1,0 +1,28 @@
+example_town {
+    "This is the example town",
+    TRANS {
+        "up the street" = example_home,
+        "down the street" = example_tavern,
+    },
+}
+
+example_home {
+    "The home of example man",
+    TRANS {
+        "out the door" = example_town,
+    },
+}
+
+example_tavern {
+    "The tavern of example town",
+    TRANS {
+        "out the door" = example_town,
+    },
+}
+
+start {
+    "Setup location",
+    TRANS {
+        "into the world" = example_town,
+    },
+}

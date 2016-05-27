@@ -1,15 +1,17 @@
-import sys, os
+import sys
+import os.path
 
 from DMParser import *
 
 
 class WorldRunner:
     START_NODE = "start"
-    def __init__(self, world, output,printwidth=20):
+
+    def __init__(self, world, output,printwidth=60):
         self.world = world
         self.output = output
         self.current_node = world.getNode(WorldRunner.START_NODE)
-        self.pw=printwidth
+        self.pw = printwidth
 
     def run(self):
         self.printFormat("Welcome Travelers")
@@ -108,8 +110,14 @@ class WorldRunner:
         self.describeSetting()
 
     def printHelp(self):
-        pass
-
+        self.printFormat("move [dir] : follow a direction to another location")
+        self.printFormat("teleport [name] : set location to node")
+        self.printFormat("describe : describe settings")
+        self.printFormat("quest [name] : give details on a particular questline")
+        self.printFormat("quests : list all quests")
+        self.printFormat("get [name] : get value of world attribute / questline")
+        self.printFormat("set [name] : set value of world attribute / questline")
+        self.printFormat("exit : close client")
 
     def printFormat(self,s,indent=""):
         s_t = s.split()
@@ -157,5 +165,5 @@ if __name__ == "__main__":
 
     p = WorldParser(filename)
     w = p.parse()
-    wr = WorldRunner(w, outputpath, 40)
+    wr = WorldRunner(w, outputpath)
     wr.run()

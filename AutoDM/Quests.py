@@ -21,7 +21,7 @@ class Questline(object):
         if val not in self.quest_nodes:
             print("[!] Given quest value does not exist")
         else:
-            print(self.quest_values[val])
+            print(self.quest_nodes[val])
 
     def progress(self, val):
         if val not in self.curr_node.transitions:
